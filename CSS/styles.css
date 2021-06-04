@@ -1,0 +1,132 @@
+body {
+  background-color: #f0fff0;
+}
+
+.header {
+  background-color: #fffff0;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 250px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 0.5px solid #d3d3d3;
+  -webkit-box-shadow: 0em -0.2em 0.5em 0em #808080;
+          box-shadow: 0em -0.2em 0.5em 0em #808080;
+}
+
+.header__titel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 200;
+  text-shadow: 4px 4px 4px #a9a9a9;
+}
+
+.header__titel i {
+  margin-left: 8px;
+  color: #5f9ea0;
+}
+
+.header__input-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header button {
+  cursor: pointer;
+  background-color: #5f9ea0;
+}
+
+.header button:hover {
+  background-color: #87cefa;
+}
+
+.header button:active {
+  background-color: #87cefa;
+  color: #fff;
+}
+
+.main {
+  background-color: #e0ffff;
+  -webkit-box-shadow: 0em 0.2em 0.5em 0em #808080;
+          box-shadow: 0em 0.2em 0.5em 0em #808080;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  width: 240px;
+}
+
+.main__task-list {
+  margin: 10px;
+  padding: 0;
+}
+
+.main__task-list li {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20px auto 20px;
+      grid-template-columns: 20px auto 20px;
+      grid-template-areas: "C I T";
+  list-style-type: none;
+  border-bottom: 0.5px solid #d3d3d3;
+  padding-bottom: 2px;
+}
+
+.main__task-list li input {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: C;
+  cursor: pointer;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.main__task-list li input[type=checkbox] + span {
+  text-decoration: none;
+}
+
+.main__task-list li input[type=checkbox]:checked + span {
+  text-decoration: line-through;
+}
+
+.main__task-list li span {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: I;
+  cursor: default;
+  margin: 5px;
+  text-shadow: 2px 2px 4px #a9a9a9;
+}
+
+.main__task-list li i {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: T;
+  cursor: pointer;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.main__task-list li i:hover {
+  color: #ff6347;
+}
+
+.main__task-list li i:active {
+  color: #dc143c;
+}
+/*# sourceMappingURL=styles.css.map */

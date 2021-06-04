@@ -1,0 +1,93 @@
+@import "./variabelen";
+
+
+body {
+  background-color:$main-background;
+}
+
+.header {
+  background-color: $header;
+  margin:auto;
+  display:flex;
+  width:250px;
+  flex-direction: column;
+  justify-content: center;
+  border:0.5px solid $borders; 
+  box-shadow: 0em -0.2em 0.5em 0em $ouside-box-shadow;
+  &__titel {
+    display:flex;
+    align-self: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    text-shadow: 4px 4px 4px $lettershadow;
+    & i {
+      margin-left:8px;
+      color:$add-button;
+    }
+  }
+  &__input-field {
+    display: flex;
+  }
+  & button{
+    cursor: pointer;
+    background-color: $add-button;
+    &:hover {
+      background-color: $add;
+    }
+    &:active {
+      background-color: $add;
+      color:$white-tekst;
+    }
+  }
+}
+
+.main {
+  background-color: $list;
+  box-shadow: 0em 0.2em 0.5em 0em $ouside-box-shadow;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin:auto;
+  display: grid;
+  width: 240px;
+  &__task-list{
+    margin:10px;
+    padding:0;
+    & li{
+      display: grid;
+      grid-template-columns: 20px auto 20px;
+      grid-template-areas:
+      "C I T";
+      list-style-type: none;
+      border-bottom:0.5px solid $borders;
+      padding-bottom: 2px; 
+      & input {
+        grid-area: C ;
+        cursor: pointer;
+        align-self: center;
+        &[type=checkbox] + span {
+          text-decoration:none;
+        }
+        &[type=checkbox]:checked + span{
+          text-decoration: line-through;
+        }
+      }
+      & span {
+        grid-area:I;
+        cursor: default;
+        margin:5px;
+        text-shadow: 2px 2px 4px $lettershadow;
+      }
+      & i {
+        grid-area: T;
+        cursor: pointer;
+        align-self: center;
+        &:hover {
+          color:$delete;
+        }
+        &:active{
+          color:$pushDelete;
+        }
+      }
+    }
+  }
+}
